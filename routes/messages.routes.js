@@ -26,8 +26,13 @@ messageRouter.get("/new", (req, res) => {
 messageRouter.post("/new", (req, res) => {
     const { authorName, messageText } = req.body;
     messages.push({ text: messageText, user: authorName, added: new Date() });
-    res.redirect("/")
-    
+    res.redirect("/");
+});
+
+messageRouter.get("/:author", async (req, res) => {
+    const { author } = req.params;
+    const message = messages.find((m) => m.user === author);
+    res.render("message.ejs", { message: message });
 });
 
 module.exports = messageRouter;

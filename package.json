@@ -20,8 +20,10 @@
   },
   "homepage": "https://github.com/KARDT89/Mini-Message-Board#readme",
   "dependencies": {
+    "bootstrap": "^5.3.8",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "normalize.css": "^8.0.1"
   }
 }
