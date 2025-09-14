@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome, <%= title %>!</h1>
+    <a href="/new">
+        <button>Add New</button>
+    </a>
+        <p>
+            <% messages.forEach((message)=>{%>
+                <ul>
+                    <li><%= message.text %></li>
+                    <li><%= message.user %></li>
+                    <li><%= message.added %></li>
+                </ul>
+            <%})%>
+        </ul>
+</body>
+</html>
